@@ -1,0 +1,39 @@
+.page {
+    display: flex;
+    flex-direction: row;
+}
+
+.page .section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    margin-top: 20px;
+    margin-left: 20px;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.page .section .button {
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%;
+}
+
+.page .section .button > header {
+    justify-content: center;
+    text-align: center;
+}
+
+.page .section .box {
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%;
+}
