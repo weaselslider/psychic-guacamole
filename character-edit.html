@@ -4,7 +4,145 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <style media="screen">
+    #main{
+      display: flex;
+      flex-direction: row;
+    }
+    #sub1{
+      display: flex;
+      flex-direction: column;
+    }
+    #throws{
+      display: flex;
+      flex-direction: row;
+    }
+    #main2{
+      display: flex;
+      flex-direction: row;
+    }
+  </style>
   <body>
+    <header></header>
+    <div id="main" class="flex-box">
+      <div id="sub1" class="flex-box">
+        <table>
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" id="nameBox" value=""></td>
+          </tr>
+          <tr>
+            <td>Class:</td>
+            <td><input type="text" id="classBox" value=""><td><!-- probably wanna change this - dropdown? -->
+          </tr>
+          <tr>
+            <td>Level:</td>
+            <td><input type="number" id="levelBox" value=""><td>
+          </tr>
+          <tr>
+            <td>Race:</td>
+            <td><input type="text" id="raceBox" value=""><td><!-- probably wanna change this - dropdown? -->
+          </tr>
+          <tr>
+            <td>Alignment:</td>
+            <td><input type="text" id="alignmentBox" value=""></td>
+          </tr>
+          <tr>
+            <td>Exp:</td>
+            <td><input type="number" id="expBox" value=""></td>
+          </tr>
+          <tr>
+            <table>
+              <tr>
+                <td>
+                  <button type="button" id="dexterityBox">Dexterity<br>12 +1<br><p id="dexterityThrow"></p></button>
+                </td>
+                <td>
+                  <button type="button" id="strengthBox">Strength<br>10 +0<br><p id="strengthThrow"></p></button>
+                </td>
+                <td>
+                  <button type="button" id="constitutionBox">Constitution<br>8 -1<br><p id="constitutionThrow"></p></button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" id="intelligenceBox">Intelligence<br>12 +1<br><p id="cintelligenceThrow"></p></button>
+                </td>
+                <td>
+                  <button type="button" id="wisdomBox">Wisdom<br>10 +0<br><p id="wisdomThrow"></p></button>
+                </td>
+                <td>
+                  <button type="button" id="charismaBox">Charisma<br>8 -1<br><p id="charismaThrow"></p></button>
+                </td>
+              </tr>
+            </table>
 
+          </tr>
+          <tr>
+            <div id="throws">
+              <table id="saves">
+
+                <tr>
+                  <td><button type="button" id="dexteritySave">Dexterity<br><p id="dexteritySaveRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="strengthSave">Strength<br><p id="strengthSaveRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="constitutionSave">Constitution<br><p id="constitutionSaveRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="intelligenceSave">Intelligence<br><p id="cintelligenceSaveRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="wisdomSave">Wisdom<br><p id="wisdomSaveRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="charismaSave">Charisma<br><p id="charismaSaveRoll"></p></button></td>
+                </tr>
+              </table>
+
+              <table>
+                <tr>
+                  <td><button type="button" id="ACBox">Armor Class<br><p id="AcActual">15</p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="InitiativeBox">Initiative<br><p id="InitiativeRoll"></p></button></td>
+                </tr>
+                <tr>
+                  <td><button type="button" id="Speed">Speed<br><p id="SpeedBox"></p></button></td>
+                </tr>
+              </table>
+            </div>
+          </tr>
+        </table>
+      </div>
+
+
+      <div>
+        <b>Skills</b>
+        <table>
+          <tr><td></td><td></td></tr>
+          <tr id="acrobatics">
+            <td><button type="button" id="AcrobaticsSkillBox">+3 Acrobatics (dex) (adv)</button></td><td id="acrobaticsSkillThrow"></td>
+          </tr>
+          <tr>
+            <td><button type="button" id="AnimalHandlingSkillBox">-3 Animal Handling (wis) (dis)</button></td><td id="AnimalHandlingSkillThrow"></td>
+          <tr>
+      </div>
+
+    </div>
+    <div id="main2">
+      <table>
+        <tr>
+          <td>Max Hp: </td><td id="maxHPBox">20</td>
+
+          <td>Current hp: </td><td id="currentHPBox">10</td>
+
+          <td>Temp Hit Points: </td><td id="TempHitBox"> 0<id
+        </tr>
+      </table>
+    </div>
+    <footer></footer>
   </body>
 </html>
