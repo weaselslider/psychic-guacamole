@@ -10,6 +10,7 @@
     flex: 1;
     margin: 20px;
     gap: 20px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
     border: 2px solid black;
@@ -21,8 +22,78 @@
     justify-content: center;
     align-items: center;
     flex: 1;
+    padding: 10px;
 }
 
 .page .section .card > header {
     text-align: center;
+    font-weight: bold;
+}
+
+.page .section .card > textarea {
+    width: 100%;
+}
+
+.top-banner {
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.homebrew {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    color: black;
+}
+
+.homebrew > div {
+    flex-grow: 1;
+    margin: auto;
+    border: 1px solid blue;
+}
+
+.ability-score {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid black;
+    color: black;
+}
+
+.ability-score > div {
+    flex-grow: 1;
+    margin: auto;
+    border: 1px solid blue;
+}
+
+.ability-card {
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 10px;
 }
