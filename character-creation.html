@@ -3,19 +3,15 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="character-creation.css">
-    <title></title>
   </head>
   <body>
+
+    <!-- Top Banner -->
+    <div class="top-banner">
+      Banner
+    </div>
+
     <div class="page">
-
-      <!-- Top Banner -->
-      <div class="section">
-
-        <div class="top-banner">
-          This is the top banner
-        </div>
-
-      </div>
 
       <!-- Homebrew Checkboxes -->
       <div class="section">
@@ -26,53 +22,71 @@
           <div class="homebrew">
 
             <div>
-              <input type="checkbox" id="box1" name="box1">
-              <label for="box1">box</label>
+              <input type="checkbox" name="homebrew" onclick="onlyOne(this)">
+              <label>Blood Hunter</label>
             </div>
             <div>
-              <input type="checkbox" id="box2" name="box2">
-              <label for="box2">box</label>
+              <input type="checkbox" name="homebrew" onclick="onlyOne(this)">
+              <label>Scholar</label>
             </div>
             <div>
-              <input type="checkbox" id="box3" name="box3">
-              <label for="box3">box</label>
+              <input type="checkbox" name="homebrew" onclick="onlyOne(this)">
+              <label>Shaman</label>
             </div>
             <div>
-              <input type="checkbox" id="box4" name="box4">
-              <label for="box4">box</label>
+              <input type="checkbox" name="homebrew" onclick="onlyOne(this)">
+              <label>Necromancer</label>
             </div>
 
           </div>
 
+          <button>
+            Add Homebrew
+          </button>
+
         </div>
+        
 
       </div>
 
       <!-- Race and Class -->
-      <div class="section" style="gap: 50px">
+      <div class="section" style="gap: 150px">
 
-        <div class="card">
+        <div class="card" style="max-width: 300px;">
           <header>Race</header>
 
-          <div>
-            <select name="Race" id="race">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
+          <div style="margin-top: 25px">
+            <select name="Race" id="race" >
+              <option value="">Dragonborn</option>
+              <option value="">Dwarf</option>
+              <option value="">Elf</option>
+              <option value="">Gnome</option>
+              <option value="">Helf-elf</option>
+              <option value="">Halfling</option>
+              <option value="">Half-Orc</option>
+              <option value="">Human</option>
+              <option value="">Triefling</option>
             </select>
           </div>
         </div>
 
-        <div class="card">
+        <div class="card" style="max-width: 300px;">
           <header>Class</header>
 
-          <div>
+          <div style="margin-top: 25px">
             <select name="Class" id="class">
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="opel">Opel</option>
-              <option value="audi">Audi</option>
+              <option value="">Barbarian</option>
+              <option value="">Bard</option>
+              <option value="">Cleric</option>
+              <option value="">Druid</option>
+              <option value="">Fighter</option>
+              <option value="">Monk</option>
+              <option value="">Paladin</option>
+              <option value="">Ranger</option>
+              <option value="">Rogue</option>
+              <option value="">Sorcerer</option>
+              <option value="">Warlock</option>
+              <option value="">Wizard</option>
             </select>
           </div>
         </div>
@@ -88,12 +102,12 @@
           <div class="ability-score">
 
             <div>
-              <input type="radio">
-              <label>box</label>
+              <input type="radio" name="ability">
+              <label>Standard Distribution</label>
             </div>
             <div>
-              <input type="radio">
-              <label>box</label>
+              <input type="radio" name="ability">
+              <label>Dice Roll</label>
             </div>
           </div>
         </div>
@@ -199,21 +213,28 @@
         <div class="card">
           <header>Equipment</header>
 
-          <input type="search" placeholder="search..." style="width: 100%"></input>
+          <input type="search" placeholder="search..." style="width:100%; margin-bottom: 5px;"></input>
 
           <text>Total weight: 0lbs</text>
         </div>
       </div>
 
-      <!-- Footer -->
-      <div class="section" >
-
-        <div class="footer">
-          This is the footer
-        </div>
-
-      </div>
-
     </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      This is the footer
+    </div>
+
   </body>
+  <script>
+    var totalWeight = 0;
+
+    function onlyOne(checkbox) {
+    var checkboxes = document.getElementsByName('homebrew')
+    checkboxes.forEach((item) => {
+        if (item !== checkbox) item.checked = false
+    })
+}
+  </script>
 </html>
