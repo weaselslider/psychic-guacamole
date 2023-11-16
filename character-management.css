@@ -1,6 +1,18 @@
+:root {
+    --background-color: #1D1D1D;
+    --card-color: #2B2B2B;
+    --top-banner-color: #333333;
+}
+
+body {
+    margin: 0;
+}
+
 .page {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    background-color: var(--background-color);
 }
 
 .page .section {
@@ -10,8 +22,22 @@
     margin-top: 20px;
     margin-left: 20px;
     gap: 20px;
+    padding: 10px;
     justify-content: center;
     align-items: center;
+    background-color: var(--background-color);
+    color: white;
+}
+
+.page .section > button {
+    margin-top: 12px;
+    background-color: green;
+    height: 30px;
+    color: white;
+    flex: 1;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 30%;
 }
 
 .page .section .button {
@@ -30,10 +56,43 @@
 
 .page .section .box {
     border: 3px solid black;
+    border-radius: 10px;
     justify-content: center;
     align-items: center;
+    margin-left: 5px;
     flex: 1;
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 30%;
+    min-height: 50px;
+    background-color: var(--card-color);
+    color: white;
+}
+
+.page .section .box > p {
+    margin-left: 20px;
+}
+
+.top-banner {
+    position: relative;
+    box-shadow: 0px 5px 5px #111111;
+    height: 40px;
+    z-index: 10;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--top-banner-color);
+    color: white;
+}
+.top-banner > h1 {
+    margin-top: 0;
+}
+
+.footer {
+    position: relative;
+    box-shadow: 0px -2px 5px #111111;
+    height: 60px;
+    z-index: 10;
+    padding: 10px;
+    background-color: var(--top-banner-color);
+    color: white;
 }
