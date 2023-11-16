@@ -5,9 +5,10 @@
     <title></title>
   </head>
   <style media="screen">
-    #main{
+    .main{
       display: flex;
       flex-direction: row;
+      padding-bottom: 15px;
     }
     #sub1{
       display: flex;
@@ -17,61 +18,63 @@
       display: flex;
       flex-direction: row;
     }
-    #main2{
-      display: flex;
-      flex-direction: row;
+    .normalData{
+      padding:0 15px;
+    }
+    table{
+      padding:0 15px;
     }
   </style>
   <body>
     <header></header>
-    <div id="main" class="flex-box">
+    <div id="main" class="main">
       <div id="sub1" class="flex-box">
         <table>
           <tr>
-            <td>Name:</td>
-            <td><input type="text" id="nameBox" value=""></td>
+            <td class="normalData">Name:</td>
+            <td class="normalData"><input type="text" id="nameBox" value=""></td>
           </tr>
           <tr>
-            <td>Class:</td>
-            <td><input type="text" id="classBox" value=""><td><!-- probably wanna change this - dropdown? -->
+            <td class="normalData">Class:</td>
+            <td class="normalData"><input type="text" id="classBox" value=""><td><!-- probably wanna change this - dropdown? -->
           </tr>
           <tr>
-            <td>Level:</td>
-            <td><input type="number" id="levelBox" value=""><td>
+            <td class="normalData">Level:</td>
+            <td class="normalData"><input type="number" id="levelBox" value=""><td>
           </tr>
           <tr>
-            <td>Race:</td>
-            <td><input type="text" id="raceBox" value=""><td><!-- probably wanna change this - dropdown? -->
+            <td class="normalData">Race:</td>
+            <td class="normalData"><input type="text" id="raceBox" value=""><td><!-- probably wanna change this - dropdown? -->
           </tr>
           <tr>
-            <td>Alignment:</td>
-            <td><input type="text" id="alignmentBox" value=""></td>
+            <td class="normalData">Alignment:</td>
+            <td class="normalData"><input type="text" id="alignmentBox" value=""></td>
           </tr>
           <tr>
-            <td>Exp:</td>
-            <td><input type="number" id="expBox" value=""></td>
+            <td class="normalData">Exp:</td>
+            <td class="normalData"><input type="number" id="expBox" value=""></td>
           </tr>
           <tr>
             <table>
               <tr>
-                <td>
+                <td class="normalData">
                   <button type="button" id="dexterityBox">Dexterity<br>12 +1<br><p id="dexterityThrow"></p></button>
                 </td>
-                <td>
+                <td class="normalData">
                   <button type="button" id="strengthBox">Strength<br>10 +0<br><p id="strengthThrow"></p></button>
                 </td>
-                <td>
+                <td class="normalData">
                   <button type="button" id="constitutionBox">Constitution<br>8 -1<br><p id="constitutionThrow"></p></button>
                 </td>
               </tr>
               <tr>
-                <td>
+                <td class="normalData">
                   <button type="button" id="intelligenceBox">Intelligence<br>12 +1<br><p id="cintelligenceThrow"></p></button>
                 </td>
-                <td>
+                <td class="normalData">
                   <button type="button" id="wisdomBox">Wisdom<br>10 +0<br><p id="wisdomThrow"></p></button>
                 </td>
-                <td>
+                <td class="normalData">
                   <button type="button" id="charismaBox">Charisma<br>8 -1<br><p id="charismaThrow"></p></button>
                 </td>
               </tr>
@@ -83,34 +86,34 @@
               <table id="saves">
 
                 <tr>
-                  <td><button type="button" id="dexteritySave">Dexterity<br><p id="dexteritySaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="dexteritySave">Dexterity<br><p id="dexteritySaveRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="strengthSave">Strength<br><p id="strengthSaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="strengthSave">Strength<br><p id="strengthSaveRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="constitutionSave">Constitution<br><p id="constitutionSaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="constitutionSave">Constitution<br><p id="constitutionSaveRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="intelligenceSave">Intelligence<br><p id="cintelligenceSaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="intelligenceSave">Intelligence<br><p id="cintelligenceSaveRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="wisdomSave">Wisdom<br><p id="wisdomSaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="wisdomSave">Wisdom<br><p id="wisdomSaveRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="charismaSave">Charisma<br><p id="charismaSaveRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="charismaSave">Charisma<br><p id="charismaSaveRoll"></p></button></td>
                 </tr>
               </table>
 
               <table>
                 <tr>
-                  <td><button type="button" id="ACBox">Armor Class<br><p id="AcActual">15</p></button></td>
+                  <td class="normalData"><button type="button" id="ACBox">Armor Class<br><p id="AcActual">15</p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="InitiativeBox">Initiative<br><p id="InitiativeRoll"></p></button></td>
+                  <td class="normalData"><button type="button" id="InitiativeBox">Initiative<br><p id="InitiativeRoll"></p></button></td>
                 </tr>
                 <tr>
-                  <td><button type="button" id="Speed">Speed<br><p id="SpeedBox"></p></button></td>
+                  <td class="normalData"><button type="button" id="Speed">Speed<br><p id="SpeedBox"></p></button></td>
                 </tr>
               </table>
             </div>
@@ -119,27 +122,137 @@
       </div>
 
 
-      <div>
+      <div id="sub2">
         <b>Skills</b>
         <table>
-          <tr><td></td><td></td></tr>
+
           <tr id="acrobatics">
-            <td><button type="button" id="AcrobaticsSkillBox">+3 Acrobatics (dex) (adv)</button></td><td id="acrobaticsSkillThrow"></td>
+            <td class="normalData"><button type="button" id="AcrobaticsSkillBox">+3 Acrobatics (dex) (adv)</button></td><td id="acrobaticsSkillThrow"></td>
           </tr>
           <tr>
-            <td><button type="button" id="AnimalHandlingSkillBox">-3 Animal Handling (wis) (dis)</button></td><td id="AnimalHandlingSkillThrow"></td>
-          <tr>
+            <td class="normalData"><button type="button" id="AnimalHandlingSkillBox">-3 Animal Handling (wis) (dis)</button></td><td id="AnimalHandlingSkillThrow"></td>
+          </tr>
+        </table>
       </div>
 
     </div>
-    <div id="main2">
+
+    <div id="main2" class = "main">
       <table>
         <tr>
-          <td>Max Hp: </td><td id="maxHPBox">20</td>
+          <td class="normalData">Max Hp: </td><td id="maxHPBox">20</td>
 
-          <td>Current hp: </td><td id="currentHPBox">10</td>
+          <td class="normalData">Current hp: </td><td id="currentHPBox">10</td>
 
-          <td>Temp Hit Points: </td><td id="TempHitBox"> 0<id
+          <td class="normalData">Temp Hit Points: </td><td id="TempHitBox"> 0<id
+        </tr>
+        <tr>
+          <td class="normalData">Total Hit Dice: </td><td id="TotalHitDice">3</td>
+          <td class="normalData">Hit Dice: </td><td id="HitDice">d10</td>
+      </table>
+    </div>
+
+    <div id="main3" class="main">
+      <table>
+        <tr>
+          <td class="normalData">Death Saves</td>
+        </tr>
+        <tr>
+          <td class="normalData">Successes</td>
+          <td id="SuccessBox" class="normalData">🟢🟢⚫</td>
+        </tr>
+        <tr>
+          <td class="normalData">Fails</td>
+          <td id="FailsBox" class="normalData">🔴⚫⚫</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <td class="normalData">Inspiration:</td>
+          <td class="normalData"><input type="text" id="InspirationBox" value=""></td>
+        </tr>
+        <tr>
+          <td class="normalData">Proficiency Bonus:</td>
+          <td class="normalData"><input type="text" id="ProficiencyBox" value=""></td>
+        </tr>
+        <tr>
+          <td class="normalData">Passive Wisdom:</td>
+          <td class="normalData"><input type="text" id="PassiveWisdomBox" value=""></td>
+        </tr>
+      </table>
+    </div>
+    <div id="main4" class="main">
+      <table>
+        <tr>
+          <td class="normalData">Personality Traits</td>
+          <td class="normalData">Ideals</td>
+        </tr>
+        <tr>
+          <td class="normalData"><textarea name="name" rows="8" cols="40"></textarea></td>
+          <td class="normalData"><textarea name="name" rows="8" cols="40"></textarea></td>
+        </tr>
+        <tr><p></p></tr>
+        <tr>
+          <td class="normalData">Bonds</td>
+          <td class="normalData">Flaws</td>
+        </tr>
+        <tr>
+          <td class="normalData"><textarea name="name" rows="8" cols="40"></textarea></td>
+          <td class="normalData"><textarea name="name" rows="8" cols="40"></textarea></td>
+        </tr>
+        <tr>
+          <td class="normalData">Other Proficiencies & languages</td>
+          <td class="normalData">Attacks & spellcasting</td>
+        </tr>
+        <tr>
+          <td class="normalData"><textarea name="name" rows="1" cols="10"></textarea></td>
+          <td class="normalData"><textarea name="name" rows="1" cols="10"></textarea></td>
+        </tr>
+        <tr>
+          <td class="normalData"><textarea name="name" rows="8" cols="40"></textarea></td>
+          <td class="normalData"><div>
+
+            <input type="text" id="NewSpellName" value="NewSpellName">
+            <input type="text" id="NewSpellAtkBonus" value="NewSpellAtkBonus">
+            <input type="text" id="NewSpellDamage" value="NewSpellDamage">
+            <button type="button" name="button">Create</button>
+            <br>
+            <div id="SpellDiv">
+
+            </div>
+
+          </div></td>
+        </tr>
+
+
+      </table>
+    </div>
+
+    <div class="main">
+      <table>
+        <tr>
+          <td>Age:</td>
+          <td><input type="text" id="NameBox" value=""></td>
+        </tr>
+        <tr>
+          <td>Height:</td>
+          <td><input type="text" id="HeightBox" value=""></td>
+        </tr>
+        <tr>
+          <td>Weight:</td>
+          <td><input type="text" id="WeightBox" value=""></td>
+        </tr>
+        <tr>
+          <td>Eyes:</td>
+          <td><input type="text" id="EyesBox" value=""></td>
+        </tr>
+        <tr>
+          <td>Skin:</td>
+          <td><input type="text" id="SkinBox" value=""></td>
+        </tr>
+        <tr>
+          <td>Hair:</td>
+          <td><input type="text" id="HairBox" value=""></td>
         </tr>
       </table>
     </div>
